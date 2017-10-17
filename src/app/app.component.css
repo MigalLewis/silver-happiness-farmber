@@ -1,6 +1,11 @@
 .main{
-    height: 1000px;
+    height: 2000px;
     background-color: #edf3a4;
     background-image: url(/assets/green-farm-landscape-powerpoint-background.jpg);
-    background-size: cover;
+    background-size: 100%  30%;
+    background-repeat:no-repeat;
+
+}
+.main img{
+    opacity: 0.5;
 }
