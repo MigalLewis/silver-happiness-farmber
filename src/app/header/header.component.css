@@ -1,0 +1,19 @@
+.header {
+    height: 150px;
+    width:100%;
+    padding: 10px;
+}
+img{
+    float: left;
+    height: 150px;
+    width: 150px;
+    margin: 0px;
+}
+h2{
+    float:left;
+    margin: 15px;
+    margin-top: 50px;
+    height: 100%;
+    text-align: center;
+    color:#9f7039;
+}
