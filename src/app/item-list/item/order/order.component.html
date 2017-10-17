@@ -1,0 +1,15 @@
+<div class="order">
+  <form name="form-order">
+    <h2>{{orderItem.item.name}}</h2>
+    <img [src]="orderItem.item.imagePath" [alt]="orderItem.item.name">
+    <p>{{orderItem.item.description}}</p>
+    <p>Price per unit : R {{orderItem.item.price}}</p>
+    <hr/>
+    <label for="input-amount">Amount</label>
+    <input name="input-amount" type="text" [(ngModel)]="orderItem.amount">
+    <output>Total : {{orderItem.total}}</output>
+    <hr/>
+    <button type="submit">Add to cart</button>
+    <button type="reset">Cancel</button>
+  </form>
+</div>
