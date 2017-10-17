@@ -24,3 +24,11 @@
     /* margin: 15px; */
     /* margin-top: 50px; */
 }
+.button-group .checkout{
+    background:url(/assets/shoppingCart.png) center no-repeat;
+    background-color: #a4ba4a;
+    background-size: 100% 100%;
+    width:50px;
+    float: right;
+    margin-right: 10px;
+}

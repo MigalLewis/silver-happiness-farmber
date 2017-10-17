@@ -9,6 +9,7 @@ import { ManageComponent } from './manage/manage.component';
 import { ItemListComponent } from './item-list/item-list.component';
 import { ItemComponent } from './item-list/item/item.component';
 import { OrderComponent } from './item-list/item/order/order.component';
+import { CheckoutComponent } from './item-list/checkout/checkout.component';
 
 const appRoutes: Routes = [
   { path: 'crops/all', component:  ItemListComponent},
@@ -24,7 +25,8 @@ const appRoutes: Routes = [
     ManageComponent,
     ItemListComponent,
     ItemComponent,
-    OrderComponent
+    OrderComponent,
+    CheckoutComponent
   ],
   imports: [
     BrowserModule,
