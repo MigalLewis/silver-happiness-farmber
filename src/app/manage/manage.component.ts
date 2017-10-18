@@ -21,6 +21,7 @@ export class ManageComponent implements OnInit {
     // this.router.navigate(['/details']);
   }
   onMyOrders(){
+    this.router.navigate(['my','orders']);
     
   }
 

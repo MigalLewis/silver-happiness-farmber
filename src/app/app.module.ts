@@ -9,12 +9,14 @@ import { ManageComponent } from './manage/manage.component';
 import { ItemListComponent } from './item-list/item-list.component';
 import { ItemComponent } from './item-list/item/item.component';
 import { OrderComponent } from './item-list/item/order/order.component';
+import { MyOrderListComponent } from './my-order-list/my-order-list.component';
 
 const appRoutes: Routes = [
   { path: 'crops/all', component:  ItemListComponent},
   { path: 'order', component:  OrderComponent},
+  { path: 'my/orders', component:  MyOrderListComponent},
   
-  // { path: 'profile', component:  ProfileComponent}
+  // { path: 'my/profile', component:  ProfileComponent}
 ];
 
 @NgModule({
@@ -24,7 +26,8 @@ const appRoutes: Routes = [
     ManageComponent,
     ItemListComponent,
     ItemComponent,
-    OrderComponent
+    OrderComponent,
+    MyOrderListComponent
   ],
   imports: [
     BrowserModule,
