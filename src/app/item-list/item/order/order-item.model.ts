@@ -1,6 +1,6 @@
 import { Item } from './../../item.model';
 export enum Status {
-    POSSIBLE,
+    PROSPECT,
     PENDING,
     ACCEPTED,
     ON_DELEVERY,
@@ -18,7 +18,7 @@ export class OrderItem{
         this.item=item;
         this.amount=amount;
         this.total=this.calculateTotal();
-        this.status=Status.POSSIBLE;
+        this.status=Status.PROSPECT;
         this.statusValue=this.getStatusValue();
     }
 
