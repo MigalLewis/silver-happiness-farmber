@@ -1,3 +1,4 @@
+import { OrderService } from './../order.service';
 import { Item } from './../item-list/item.model';
 import { OrderItem } from './../item-list/item/order/order-item.model';
 import { Component, OnInit } from '@angular/core';
@@ -8,13 +9,17 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./my-order-list.component.css']
 })
 export class MyOrderListComponent implements OnInit {
-  item: Item= new Item(4,"Peas","This is peas","https://upload.wikimedia.org/wikipedia/commons/thumb/1/11/Peas_in_pods_-_Studio.jpg/1200px-Peas_in_pods_-_Studio.jpg",10);
-  orderItem:OrderItem=new OrderItem(this.item,50);
-  myOrderItems : OrderItem[]=[this.orderItem];
+  public myOrderItems : OrderItem[];
 
-  constructor() { }
+  constructor(private orderService : OrderService) { }
 
   ngOnInit() {
+    this.orderService.orderListStatusChange.subscribe((status:String) => this.onRefresh());
+    this.onRefresh();
+  }
+
+  onRefresh(){
+    this.myOrderItems=this.orderService.getAllMyOrders();
   }
 
 }

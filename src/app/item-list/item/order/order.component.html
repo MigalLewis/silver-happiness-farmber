@@ -9,7 +9,7 @@
     <input name="input-amount" type="text" [(ngModel)]="orderItem.amount">
     <output>Total : {{orderItem.total}}</output>
     <hr/>
-    <button type="submit">Add to cart</button>
+    <button (click)="onOrder()" type="submit">Order</button>
     <button type="reset">Cancel</button>
   </form>
 </div>
