@@ -20,5 +20,8 @@ export class ManageComponent implements OnInit {
   onProfile(){
     // this.router.navigate(['/details']);
   }
+  onMyOrders(){
+    
+  }
 
 }
