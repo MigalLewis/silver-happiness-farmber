@@ -10,6 +10,7 @@ import { ItemListComponent } from './item-list/item-list.component';
 import { ItemComponent } from './item-list/item/item.component';
 import { OrderComponent } from './item-list/item/order/order.component';
 import { MyOrderListComponent } from './my-order-list/my-order-list.component';
+import { MyOderItemComponent } from './my-order-list/my-oder-item/my-oder-item.component';
 
 const appRoutes: Routes = [
   { path: 'crops/all', component:  ItemListComponent},
@@ -27,7 +28,8 @@ const appRoutes: Routes = [
     ItemListComponent,
     ItemComponent,
     OrderComponent,
-    MyOrderListComponent
+    MyOrderListComponent,
+    MyOderItemComponent
   ],
   imports: [
     BrowserModule,

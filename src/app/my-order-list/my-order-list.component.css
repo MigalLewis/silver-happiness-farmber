@@ -9,3 +9,15 @@
     color: #edf3a4;  
 
 }
+.my-order-list .header{
+    /* background-color: #122d17; */
+    height: 60px;
+}
+
+.my-order-list .header label{
+    margin: 0px;
+    padding: 20px 40px;
+    color: white;
+    float: left;
+    width:40px;
+}

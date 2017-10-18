@@ -1,2 +1,11 @@
 <div class="my-order-list">
+    <div class="header">
+        <label>Name</label>
+        <label>Amount</label>
+        <label>Price</label>
+        <label>Total</label>
+        <label>Status</label>
+    </div>
+    <app-my-oder-item *ngFor="let item of myOrderItems" [myOrder]="item">
+      </app-my-oder-item>
 </div>
