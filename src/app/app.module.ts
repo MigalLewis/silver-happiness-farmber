@@ -14,11 +14,13 @@ import { ItemComponent } from './item-list/item/item.component';
 import { OrderComponent } from './item-list/item/order/order.component';
 import { MyOrderListComponent } from './my-order-list/my-order-list.component';
 import { MyOderItemComponent } from './my-order-list/my-oder-item/my-oder-item.component';
+import { SubscribeComponent } from './subscribe/subscribe.component';
 
 const appRoutes: Routes = [
   { path: 'crops/all', component:  ItemListComponent},
   { path: 'order/:id', component:  OrderComponent},
   { path: 'my/orders', component:  MyOrderListComponent},
+  { path: 'subscribe/:id', component:  SubscribeComponent}
   // { path: 'my/profile', component:  ProfileComponent}
 ];
 
@@ -31,7 +33,8 @@ const appRoutes: Routes = [
     ItemComponent,
     OrderComponent,
     MyOrderListComponent,
-    MyOderItemComponent
+    MyOderItemComponent,
+    SubscribeComponent
     
 
   ],

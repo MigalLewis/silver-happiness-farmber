@@ -17,7 +17,7 @@ export class ItemComponent implements OnInit {
 
   }
   onSubscribe() {
-    
+    this.router.navigate(['subscribe',this.item.id]);
   }
   onOrder() {
     this.router.navigate(['order',this.item.id]);
