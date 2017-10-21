@@ -1,3 +1,15 @@
-<p>
-  subsribe works!
-</p>
+<div class="subscribe">
+    <form name="form-subscribe">
+      <h2>{{subcribeItem.item.name}}</h2>
+      <img [src]="subcribeItem.item.imagePath" [alt]="subcribeItem.item.name">
+      <p>{{subcribeItem.item.description}}</p>
+      <hr/>
+      <label for="input-minAmount">Minimum amount</label>
+      <input name="input-minAmount" type="text" [(ngModel)]="subcribeItem.minAmount">
+      <label for="input-maxAmount">Maximum amount</label>
+      <input name="input-maxAmount" type="text" [(ngModel)]="subcribeItem.maxAmount">
+      <hr/>
+      <button (click)="onSubscribe()" type="submit">Subscribe</button>
+      <button type="reset">Cancel</button>
+    </form>
+  </div>
