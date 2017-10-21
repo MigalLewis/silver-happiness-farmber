@@ -1,7 +1,9 @@
+import { CropService } from './../../crop.service';
 import { OrderService } from './../../../order.service';
 import { Item } from './../../item.model';
 import { OrderItem, Status } from './order-item.model';
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-order',
@@ -9,17 +11,22 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./order.component.css']
 })
 export class OrderComponent implements OnInit {
-  item: Item= new Item(4,"Peas","This is peas","https://upload.wikimedia.org/wikipedia/commons/thumb/1/11/Peas_in_pods_-_Studio.jpg/1200px-Peas_in_pods_-_Studio.jpg",10);
-  orderItem:OrderItem=new OrderItem(this.item,0);
+  item: Item;
+  orderItem:OrderItem;
 
-  constructor(private oderService : OrderService) { }
+  constructor(private oderService : OrderService,private route : ActivatedRoute,private cropService : CropService ) { }
 
   ngOnInit() {
+    var id=this.route.snapshot.params['id'];
+    this.item=this.cropService.getCrop(id);
+    this.orderItem=new OrderItem(this.item,0);
   }
 
   onOrder(){
+    console.log("In here and odering");
     this.orderItem.status=Status.PENDING;
     this.oderService.addToMyOrders(this.orderItem);
   }
+
 
 }

@@ -9,5 +9,8 @@ export class CropService {
     getAllCrops() {
         return this.cropList.slice();
     }
+    getCrop(id : number) {
+        return this.getAllCrops().find(x => x.id == id);
+    }
 
 }

@@ -1,9 +1,11 @@
+import { CropService } from './item-list/crop.service';
 import { OrderService } from './order.service';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 
-import { Routes,RouterModule } from '@angular/router';
+import { Routes,RouterModule,ActivatedRoute } from '@angular/router';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
 import { ManageComponent } from './manage/manage.component';
@@ -15,9 +17,8 @@ import { MyOderItemComponent } from './my-order-list/my-oder-item/my-oder-item.c
 
 const appRoutes: Routes = [
   { path: 'crops/all', component:  ItemListComponent},
-  { path: 'order', component:  OrderComponent},
+  { path: 'order/:id', component:  OrderComponent},
   { path: 'my/orders', component:  MyOrderListComponent},
-  
   // { path: 'my/profile', component:  ProfileComponent}
 ];
 
@@ -31,13 +32,16 @@ const appRoutes: Routes = [
     OrderComponent,
     MyOrderListComponent,
     MyOderItemComponent
+    
+
   ],
   imports: [
     BrowserModule,
     RouterModule.forRoot(appRoutes),
-    FormsModule
+    FormsModule,
+    HttpClientModule
   ],
-  providers: [OrderService],
+  providers: [OrderService,CropService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
