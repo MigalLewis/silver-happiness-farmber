@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
   selector: 'app-item-list',
   templateUrl: './item-list.component.html',
   styleUrls: ['./item-list.component.css'],
-  providers: [CropService]
+  providers: []
 })
 export class ItemListComponent implements OnInit {
   itemList :Item[];

@@ -1,0 +1,41 @@
+<!-- name
+surname 
+photo
+location
+description
+experience
+Rating
+ -->
+<div class="profile">
+  <!-- <form name="form-subscribe"> -->
+  <div class="background">
+    <img [src]="profile.logo" [alt]="profile.name">
+    <output calss="large">{{profile.name}}</output>
+  </div>
+  <div class="card">
+    <h3>About Us</h3>
+    <p>{{profile.description}}</p>
+    <p>{{profile.experiance}}</p>
+  </div>
+  <div class="card half">
+    <h3>Location</h3>
+    <div *ngFor="let location of profile.locations">
+      <h4>{{location.name}}</h4>
+      <output>{{location.address}}</output>
+    </div>
+  </div>
+  <div class="card half">
+    <h3>Contacts</h3>
+    <div *ngFor="let person of profile.contacts">
+      <h4>{{person.name}}</h4>
+      <div *ngFor="let contact of person.contacts">
+        <img class="icon" [src]="profile.getIcon()" [alt]="profile.getContactTypeString()" />
+        <output>{{contact.value}}</output>
+        <output>{{contact.description}}</output>
+      </div>
+    </div>
+    <div *ngFor="let socialMedia of profile.socialMedia">
+      <h4>{{socialMedia.link}}</h4>
+    </div>
+  </div>
+</div>
