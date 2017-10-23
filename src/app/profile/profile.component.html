@@ -29,7 +29,7 @@ Rating
     <div *ngFor="let person of profile.contacts">
       <h4>{{person.name}}</h4>
       <div *ngFor="let contact of person.contacts">
-        <img class="icon" [src]="profile.getIcon()" [alt]="profile.getContactTypeString()" />
+        <img class="icon" [src]="profile.getIcon(contact.contactType)" [alt]="profile.getContactTypeString()" />
         <output>{{contact.value}}</output>
         <output>{{contact.description}}</output>
       </div>
