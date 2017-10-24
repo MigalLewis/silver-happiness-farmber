@@ -18,6 +18,7 @@ import { SubscribeComponent } from './subscribe/subscribe.component';
 import { ProfileComponent } from './profile/profile.component';
 import { SubscribeListComponent } from './subscribe-list/subscribe-list.component';
 import { SubscribeItemComponent } from './subscribe-list/subscribe-item/subscribe-item.component';
+import { AuthorityDirective } from './authority.directive';
 
 const appRoutes: Routes = [
   { path: 'profile', component:  ProfileComponent},
@@ -43,9 +44,8 @@ const appRoutes: Routes = [
     SubscribeComponent,
     ProfileComponent,
     SubscribeListComponent,
-    SubscribeItemComponent
-    
-
+    SubscribeItemComponent,
+    AuthorityDirective
   ],
   imports: [
     BrowserModule,
