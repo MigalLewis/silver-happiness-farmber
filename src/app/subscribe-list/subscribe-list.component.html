@@ -1,0 +1,11 @@
+<div class="subscribe-list">
+  <div class="header">
+      <label>Name</label>
+      <label>Amount</label>
+      <label>Price</label>
+      <label>Total</label>
+      <label>client</label>
+  </div>
+  <app-subscribe-item *ngFor="let item of subscribedItems" [mySubscription]="item">
+    </app-subscribe-item>
+</div>

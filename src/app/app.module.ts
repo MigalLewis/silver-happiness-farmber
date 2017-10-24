@@ -16,13 +16,17 @@ import { MyOrderListComponent } from './my-order-list/my-order-list.component';
 import { MyOderItemComponent } from './my-order-list/my-oder-item/my-oder-item.component';
 import { SubscribeComponent } from './subscribe/subscribe.component';
 import { ProfileComponent } from './profile/profile.component';
+import { SubscribeListComponent } from './subscribe-list/subscribe-list.component';
+import { SubscribeItemComponent } from './subscribe-list/subscribe-item/subscribe-item.component';
 
 const appRoutes: Routes = [
   { path: 'profile', component:  ProfileComponent},
   { path: 'crops/all', component:  ItemListComponent},
   { path: 'order/:id', component:  OrderComponent},
   { path: 'my/orders', component:  MyOrderListComponent},
+  { path: 'my/subscriptions', component:  SubscribeListComponent},
   { path: 'subscribe/:id', component:  SubscribeComponent}
+  
   // { path: 'my/profile', component:  ProfileComponent}
 ];
 
@@ -37,7 +41,9 @@ const appRoutes: Routes = [
     MyOrderListComponent,
     MyOderItemComponent,
     SubscribeComponent,
-    ProfileComponent
+    ProfileComponent,
+    SubscribeListComponent,
+    SubscribeItemComponent
     
 
   ],
