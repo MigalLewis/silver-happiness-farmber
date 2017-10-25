@@ -1,3 +1,5 @@
+import { SubscribeService } from './../subscribe.service';
+import { OrderItem } from './../item-list/item/order/order-item.model';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -7,9 +9,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SubscribeListComponent implements OnInit {
 
-  constructor() { }
+  subscribedItems:OrderItem[];
+
+  constructor(private subscribeService: SubscribeService) {}
 
   ngOnInit() {
+    this.subscribeService.subscribeListStatusChange.subscribe((status:String) => this.onRefresh());
+    this.onRefresh();
   }
+
+  onRefresh(){
+    this.subscribedItems=this.subscribeService.getAllMyOrders();
+  }
+
 
 }

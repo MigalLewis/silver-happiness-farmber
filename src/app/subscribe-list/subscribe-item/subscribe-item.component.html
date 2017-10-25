@@ -1,3 +1,9 @@
-<p>
-  subscribe-item works!
-</p>
+<div class="my-subscribed-item">
+  <label class="item">{{mySubscription.item.name}}</label>
+  <label class="item">{{mySubscription.amount}}</label>
+  <label class="item">R {{mySubscription.item.price}}</label>
+  <label class="item">R {{mySubscription.total}}</label>
+  <label class="item">{{mySubscription.buyer}}</label>
+  <label class="status">{{mySubscription.statusValue}}</label>
+  <!-- <img [src]="myOrder.item.imagePath" [alt]="myOrder.item.name"> -->
+</div>

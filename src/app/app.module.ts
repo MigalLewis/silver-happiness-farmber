@@ -1,3 +1,5 @@
+import { SubscribeService } from './subscribe.service';
+import { NotifyService } from './notify.service';
 import { CropService } from './item-list/crop.service';
 import { OrderService } from './order.service';
 import { BrowserModule } from '@angular/platform-browser';
@@ -19,6 +21,7 @@ import { ProfileComponent } from './profile/profile.component';
 import { SubscribeListComponent } from './subscribe-list/subscribe-list.component';
 import { SubscribeItemComponent } from './subscribe-list/subscribe-item/subscribe-item.component';
 import { AuthorityDirective } from './authority.directive';
+import { PushNotificationsModule } from 'angular2-notifications';
 
 const appRoutes: Routes = [
   { path: 'profile', component:  ProfileComponent},
@@ -51,9 +54,10 @@ const appRoutes: Routes = [
     BrowserModule,
     RouterModule.forRoot(appRoutes),
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    PushNotificationsModule
   ],
-  providers: [OrderService,CropService],
+  providers: [OrderService,CropService,NotifyService,SubscribeService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

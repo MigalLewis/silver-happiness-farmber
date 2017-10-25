@@ -13,13 +13,17 @@ export class OrderItem{
     public status:Status;
     public statusValue:string;
     public total:number;
+    public buyer:String;
+    public seller:String;
 
     constructor(item :Item,amount :number){
         this.item=item;
         this.amount=amount;
         this.total=this.calculateTotal();
-        this.status=Status.PROSPECT;
+        this.status=Status.PENDING;
         this.statusValue=this.getStatusValue();
+        this.buyer="";
+        this.seller="";
     }
 
     calculateTotal(){

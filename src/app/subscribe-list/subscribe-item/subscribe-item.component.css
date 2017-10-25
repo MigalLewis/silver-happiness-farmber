@@ -1,0 +1,40 @@
+.my-subscribed-item{
+    width:90%;
+    height: 60px;
+    border-radius: 5px;
+    background-color: #edf3a4;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    margin: 1% 5%;
+}
+.my-subscribed-item img{
+    height: 50px;
+    width: 50px;
+    padding: 5px 5px;
+}
+.my-subscribed-item p{
+    margin: 0px;
+    padding: 5px;
+    color: black;
+}
+.my-subscribed-item .status{
+    background-color: green;
+    border-radius: 10px;
+    margin: 0px;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    padding-right: 0px;
+    padding-left: 5px;
+    width: 90px;
+    height: 20px;
+    color: white;
+    float: left;
+}
+.my-subscribed-item .item{
+    margin: 0px;
+    padding-top: 20px;
+    padding-right: 75px;
+    padding-left: 5px;
+    width: 40px;
+    color: black;
+    float: left;
+}

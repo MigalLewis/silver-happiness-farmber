@@ -15,13 +15,13 @@ export class OrderService {
     orderListStatusChange =new EventEmitter<String>();
 
     getAllMyOrders() {
-        this.orderListStatusChange.emit("searched");
+        // this.orderListStatusChange.emit("searched");
         return this.orderList.slice();
     }
 
     addToMyOrders(myOrder : OrderItem){
         this.orderList.push(myOrder);
-        this.orderListStatusChange.emit("Added New Oder");
+        this.orderListStatusChange.emit("Added New Order");
     }
 
 }

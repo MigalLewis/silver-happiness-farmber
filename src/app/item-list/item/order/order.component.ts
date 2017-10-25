@@ -25,6 +25,7 @@ export class OrderComponent implements OnInit {
   onOrder(){
     console.log("In here and odering");
     this.orderItem.status=Status.PENDING;
+    this.orderItem.buyer="Silkworths";
     this.oderService.addToMyOrders(this.orderItem);
   }
 
