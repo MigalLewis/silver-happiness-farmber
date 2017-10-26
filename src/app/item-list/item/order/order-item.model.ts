@@ -1,7 +1,7 @@
 import { Item } from './../../item.model';
 export enum Status {
     PROSPECT,
-    PENDING,
+    BIDDING,
     ACCEPTED,
     ON_DELEVERY,
     CANCELED
@@ -20,7 +20,7 @@ export class OrderItem{
         this.item=item;
         this.amount=amount;
         this.total=this.calculateTotal();
-        this.status=Status.PENDING;
+        this.status=Status.BIDDING;
         this.statusValue=this.getStatusValue();
         this.buyer="";
         this.seller="";

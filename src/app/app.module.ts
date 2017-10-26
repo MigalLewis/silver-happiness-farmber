@@ -22,6 +22,7 @@ import { SubscribeListComponent } from './subscribe-list/subscribe-list.componen
 import { SubscribeItemComponent } from './subscribe-list/subscribe-item/subscribe-item.component';
 import { AuthorityDirective } from './authority.directive';
 import { PushNotificationsModule } from 'angular2-notifications';
+import { BiddingDetailsComponent } from './subscribe-list/subscribe-item/bidding-details/bidding-details.component';
 
 const appRoutes: Routes = [
   { path: 'profile', component:  ProfileComponent},
@@ -48,7 +49,8 @@ const appRoutes: Routes = [
     ProfileComponent,
     SubscribeListComponent,
     SubscribeItemComponent,
-    AuthorityDirective
+    AuthorityDirective,
+    BiddingDetailsComponent
   ],
   imports: [
     BrowserModule,

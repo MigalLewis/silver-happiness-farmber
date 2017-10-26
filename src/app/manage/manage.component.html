@@ -2,5 +2,7 @@
   <button type="button" (click)="onProfile()">Profile</button>
   <button type="button" (click)="onShop()">Shop</button>
   <button type="button" *appAutority="'BUYER'" (click)="onMyOrders()" >My Orders</button>
-  <button type="button" *appAutority="'SELLER'" (click)="onMySubscriptions()" >My Subscriptions</button>
+  <button type="button" *appAutority="'SELLER'" (click)="onMySubscriptions()" >Bids</button>
+  <button type="button" *appAutority="'SELLER'" (click)="onMySubscriptions()" >My Bids</button>
+  <button type="button" (click)="onMySubscriptions()" >Forum</button>
 </div>
