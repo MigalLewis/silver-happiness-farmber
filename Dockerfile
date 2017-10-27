@@ -30,4 +30,4 @@ EXPOSE 4200
 WORKDIR $FARMBER_HOME/silver-happiness-farmber
 USER $FARMBER_USR
 
-CMD [ "ng", "serve"]
+CMD [ "npm", "start"]

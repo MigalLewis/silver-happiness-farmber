@@ -4,7 +4,7 @@ import { Directive, Input,TemplateRef,ViewContainerRef } from '@angular/core';
     selector:'[appAutority]'
 })
 export class AuthorityDirective{
-    roles=["SELLER"];
+    roles=["SELLER","BUYER"];
     @Input() set appAutority(condition : string){
         if(this.roles.includes(condition)){
             this.vcRef.createEmbeddedView(this.templateRef);
